@@ -271,9 +271,9 @@ function processCommand(command, output) {
             appendToTerminal(output, `
                 <div class="secret-info">
                     <p>🕵️ <strong>Information confidentielle</strong> 🕵️</p>
-                    <p>Je suis spécialisé en cybersécurité et infrastructure réseau, avec une préférence pour les technologies Linux et les solutions open-source.</p>
-                    <p>Mes domaines d'expertise incluent l'analyse des vulnérabilités, la protection des données et l'optimisation des infrastructures.</p>
-                    <p>Dans une autre vie, j'aurais été hacker éthique pour une grande agence de renseignement... ou peut-être le suis-je déjà? 😉</p>
+                    <p>Je me forme actuellement en cybersécurité et infrastructure réseau, avec une curiosité grandissante pour les technologies Linux et les solutions open-source.</p>
+                    <p>Mes domaines d'apprentissage incluent l'analyse des vulnérabilités, la protection des données et l'optimisation des infrastructures.</p>
+                    <p>Dans une vie future, je serai peut-être hacker éthique pour une grande agence de renseignement... mais pour l'instant, je m'entraîne sur des CTF et des labs virtuels! 😉</p>
                 </div>
             `);
             break;
@@ -283,12 +283,13 @@ function processCommand(command, output) {
                 <div class="secret-skills">
                     <p>🔐 <strong>Compétences techniques avancées</strong> 🔐</p>
                     <ul>
-                        <li>Pentest et hacking éthique</li>
-                        <li>Analyse forensique</li>
-                        <li>Virtualisation avancée</li>
-                        <li>Déploiement d'infrastructure Zero-Trust</li>
-                        <li>Automatisation avec Ansible</li>
-                        <li>Conteneurisation et orchestration Kubernetes</li>
+                        <li>Débugger du code avec des larmes de développeur</li>
+                        <li>Transformer le café en code fonctionnel</li>
+                        <li>Expliquer à ma grand-mère comment installer Windows</li>
+                        <li>Réparer des imprimantes par télékinésie</li>
+                        <li>Retrouver des mots de passe en lisant dans les pensées</li>
+                        <li>Faire croire aux clients que "ça va être rapide"</li>
+                        <li>Survivre à des réunions qui auraient pu être des emails</li>
                     </ul>
                 </div>
             `);
@@ -299,11 +300,12 @@ function processCommand(command, output) {
                 <div class="secret-projects">
                     <p>🔒 <strong>Projets confidentiels</strong> 🔒</p>
                     <ul>
-                        <li><strong>HoneyNet Personnel</strong> - Architecture de pots de miel pour étudier les techniques d'attaques récentes</li>
-                        <li><strong>VPN Custom</strong> - Implémentation personnalisée avec WireGuard et authentification 2FA</li>
-                        <li><strong>IDS/IPS</strong> - Système de détection et prévention d'intrusion basé sur Suricata avec dashboard personnalisé</li>
+                        <li><strong>CaféScript</strong> - Intelligence artificielle qui transforme le niveau de caféine dans mon sang en lignes de code fonctionnelles</li>
+                        <li><strong>BugWhisperer</strong> - Dispositif qui me permet de communiquer télépathiquement avec les bugs pour leur demander de partir gentiment</li>
+                        <li><strong>SocksLocator 3000</strong> - Système révolutionnaire pour retrouver les chaussettes perdues dans la machine à laver (taux de réussite: 12%)</li>
+                        <li><strong>Anti-Réunion</strong> - Extension de calendrier qui simule automatiquement des problèmes de connexion lors des réunions inutiles</li>
                     </ul>
-                    <p><em>Ces projets ne sont pas mentionnés dans mon portfolio public pour des raisons de sécurité</em></p>
+                    <p><em>Ces projets ne sont pas mentionnés dans mon portfolio public car ils sont trop avancés pour la technologie actuelle</em></p>
                 </div>
             `);
             break;
@@ -332,11 +334,31 @@ function processCommand(command, output) {
         case 'ascii':
             appendToTerminal(output, `
                 <pre class="ascii-art">
-  ___     _                  
- / _ \\ __| | ___  _   _ _ __ 
-| | | / _\` |/ _ \\| | | | '__|
-| |_| | (_| | (_) | |_| | |   
- \\___/ \\__,_|\\___/ \\__,_|_|   
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀⠀⢀⣀⣀⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢊⢵⠿⣛⠽
+⠀⠀⠈⠲⣄⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠀⠀⠀⠀⠀⠀⣠⣴⣾⠛⠉⠉⠉⣩⠟⠋⠉⠛⠷⣶⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀
+⠀⠀⠀⠀⠀⠙⠦⣀⠙⠦⡀⠀⠀⠀⠀⢠⠋⠀⡰⠃⠀⣠⣾⣿⣿⣁⣀⣠⢴⡾⠳⣄⡀⠀⢀⡤⠞⠛⣿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠈⠑⠀⠀⠀⠀⠀⢀⠏⠀⣰⠁⢀⣾⣿⣿⣿⠋⠉⠁⢀⡞⠀⠀⠀⢉⡿⠻⣄⢀⠀⠘⣿⣷⡀⠀⠀⠀⠀⠀⠀⠰⠶
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⠃⠀⣾⣿⣿⣿⣿⠀⢀⣠⣾⣄⠀⠀⣠⠟⠀⠀⠙⣎⣷⣄⠙⣾⣷⡀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡇⠀⣸⣿⣿⣿⣽⣿⡋⠉⢹⡇⠈⠉⣿⢿⣄⠀⠀⣠⣼⣿⣿⣯⠉⣿⣧⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠁⠀⡿⠉⢿⣿⣿⣿⣇⣠⣾⣄⣀⣼⠃⠀⢙⣷⣿⠿⠋⠁⠘⣿⣆⢷⣿⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠹⣿⣿⣿⢁⣿⠀⣽⠋⢻⣾⡿⠋⠁⠀⠀⠀⠀⢻⣿⣹⣿⡇⠀⢠⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠹⣿⣿⣿⣟⣿⢷⣴⡿⠋⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⠃⠀⣸⢀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠹⣿⣿⣿⣿⡿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⡿⠀⠀⡇⢸⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣇⠀⠀⠀⠀⣼⣿⣿⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⣿⣿⠃⠀⢸⠁⡏⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣄⠀⢀⣼⣿⣿⡿⢿⣿⣻⣦⠀⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⡏⠀⠀⠃⡼⠃⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣷⣿⣿⣿⣿⢷⣾⣿⣯⠻⣷⣄⡀⠀⠀⢀⣠⣾⣿⣿⡿⠀⠀⠀⠀⠀⠀⠀⠤⣄
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⣿⣷⣿⣿⣧⣷⣼⣿⣿⣶⠛⠻⣿⣷⣾⣿⣿⡿⣿⡿⠁⠀⠀⠀⠀⠀⠀⠀⠈⠑
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣿⣿⣿⣿⣿⡑⠿⠉⡏⠈⢻⣄⣠⠞⠻⢯⣅⣼⣿⡿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣿⣿⣿⡟⣿⣿⣷⡶⠞⠻⣇⠀⢀⣠⣿⣿⡿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣿⣿⣏⣉⠈⣿⠀⣀⣤⣽⣷⣾⣿⣿⣿⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⢀⣀⣤⣤⣤⣤⣤⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⣠⣿⣿⣯⣏⣙⢻⣿⣿⣯⣶⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠀⠀
+⢛⣩⣥⣿⣷⣶⣮⣽⣿⣶⣶⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡢⣙⠦
+⠟⠉⠉⠀⢀⣽⣦⣶⡟⠛⠋⠙⣿⣩⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠟⢛⣿⣿⡿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠪⡓
+⠤⠤⢶⡞⠉⠁⠀⠈⣹⣷⡖⠋⠉⠉⣉⣿⠿⣿⡛⣻⣿⣟⠃⠈⣿⣿⣿⡶⠶⣤⣾⣿⡟⢠⡟⣿⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈
+⠀⠀⣾⡀⠀⣠⠶⠛⠉⠉⠉⣳⣴⣞⡁⠀⢰⡿⣿⣿⡄⢿⣆⡀⢨⡏⠁⠀⠀⣿⣿⡿⠓⢾⡟⠛⢿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⣿⣷⣟⠁⠀⠀⠀⣠⠞⠉⠀⠀⠉⢳⣸⣿⣯⡿⢻⢮⣿⣿⡾⠶⠶⠤⣄⡈⢻⡛⠀⠈⢷⡀⠘⣟⢿⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⢸⡟⠉⠙⠻⣆⣠⠞⠁⠀⠀⠀⠀⢀⣼⢿⣯⡿⣿⣿⣷⡛⣿⣇⠀⠀⠀⠀⠙⢿⣷⠶⠖⠺⣷⣤⣿⣦⣹⣷⣀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⣼⠁⢀⣀⣠⡿⠿⠷⢶⣤⣀⣀⣠⡿⠁⠈⢿⣷⣏⢹⠿⣿⣯⣿⣦⣤⣤⣄⡀⠀⣿⠀⠀⠀⠈⢷⡀⠉⢿⣏⢿⣿⣾⣿⣿⣶⣶⣤⡀
                               
                 </pre>
                 <p>Portfolio d'un futur expert en cybersécurité 👨‍💻</p>
@@ -348,13 +370,18 @@ function processCommand(command, output) {
                 appendToTerminal(output, `
                     <div class="super-secret">
                         <p>🔥 <strong>COMPÉTENCES SUPER SECRÈTES DÉBLOQUÉES</strong> 🔥</p>
-                        <ul>
-                            <li>Maîtrise de la blockchain et smart contracts</li>
-                            <li>Reverse engineering de malwares</li>
-                            <li>CTF - Top 50 TryHackMe</li>
-                            <li>Développement de scripts d'automatisation post-exploitation</li>
+                        <ul class="hacker-skills">
+                            <li>Maîtrise de la blockchain et smart contracts <span class="skill-level">████████░░ 80%</span></li>
+                            <li>Reverse engineering de malwares <span class="skill-level">███████░░░ 70%</span></li>
+                            <li>CTF - Top 50 TryHackMe <span class="skill-level">█████████░ 90%</span></li>
+                            <li>Développement de scripts d'automatisation post-exploitation <span class="skill-level">████████░░ 80%</span></li>
                         </ul>
-                        <p>Félicitations, vous avez trouvé une commande cachée! 🎮</p>
+                        <p class="achievement">🏆 Félicitations, vous avez trouvé une commande cachée! 🎮</p>
+                        <div class="matrix-animation">
+                            <pre class="matrix-code">01001000 01100001 01100011 01101011 01100101 01110010</pre>
+                            <p class="glitch-text" data-text="NIVEAU HACKER: DÉBLOQUÉ">NIVEAU HACKER: DÉBLOQUÉ</p>
+                        </div>
+                        <p class="easter-egg">🥚 Essayez 'sudo rm -rf /' pour plus de surprises... (ou peut-être pas 😈)</p>
                     </div>
                 `);
             } else {
@@ -372,12 +399,13 @@ function processCommand(command, output) {
                         <p>--- passions.secret ping statistics ---</p>
                         <p>2 packets transmitted, 2 packets received, 0.0% packet loss</p>
                         <div class="passion-reveal">
-                            <p>🎮 <strong>Passions secrètes révélées</strong> 🎮</p>
+                            <p>🕸️ <strong>Passions secrètes révélées</strong> 🏃‍♂️</p>
                             <ul>
-                                <li>Collection de vieux ordinateurs et restauration</li>
-                                <li>Participation à des CTF (Capture The Flag) en équipe</li>
-                                <li>Développement de jeux rétro pour fun</li>
-                                <li>Fan de séries cyberpunk et hacking (Mr. Robot, Black Mirror)</li>
+                                <li>Fan inconditionnel de Spider-Man (avec le trait d'union, respect de la syntaxe!)</li>
+                                <li>Coureur passionné - Semi-marathon en 1h37 (plus rapide que mon PC quand j'exécute Windows Update)</li>
+                                <li>Joueur de padel redoutable (meilleur contrôle qu'avec une souris gaming)</li>
+                                <li>Capable de déboguer mon code plus vite que Peter Parker ne lance ses toiles</li>
+                                <li>Le seul développeur qui fait des backups de ses backups... des backups</li>
                             </ul>
                         </div>
                     </div>
