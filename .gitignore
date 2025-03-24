@@ -1,0 +1,37 @@
+# Système d'exploitation
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Fichiers temporaires
+*.log
+*.tmp
+*.swp
+*.swo
+*~
+
+# Fichiers de développement
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Fichiers de build et distribution
+/dist
+/build
+/out
+
+# Fichiers d'IDE
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Fichiers spécifiques au projet
+favicon.html 

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contactez Oskar Doutreligne - Développeur informatique. Formulaire de contact, coordonnées et liens vers les réseaux sociaux.">
+    <meta name="robots" content="index, follow">
+    <title>Contact - Oskar Doutreligne</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <h1>Contact</h1>
+        
+        <div class="content-container contact-container">
+            <div class="terminal-contact">
+                <div class="terminal-header">
+                    <div class="controls">
+                        <span class="control red"></span>
+                        <span class="control yellow"></span>
+                        <span class="control green"></span>
+                    </div>
+                    <div class="title">terminal - contact.sh</div>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-output">
+                        <div class="terminal-line">
+                            <span class="prompt">user@portfolio:~$</span>
+                            <span class="command">./contact.sh</span>
+                        </div>
+                        <div class="output-text">
+                            <p>Bienvenue dans mon terminal de contact !</p>
+                            <p>Vous pouvez me contacter via les méthodes ci-dessous ou utiliser le formulaire.</p>
+                        </div>
+                        
+                        <div class="terminal-line">
+                            <span class="prompt">user@portfolio:~$</span>
+                            <span class="command">cat contact_info.txt</span>
+                        </div>
+                        
+                        <div class="contact-info">
+                            <div class="contact-card">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                                <span class="contact-text">oskar.dtlg.1@gmail.com</span>
+                            </div>
+                            <div class="contact-card">
+                                <i class="fas fa-phone" aria-hidden="true"></i>
+                                <span class="contact-text">+33 7 87 98 73 39</span>
+                            </div>
+                            <div class="contact-card">
+                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                <span class="contact-text">Lille, France</span>
+                            </div>
+                        </div>
+                        
+                        <div class="terminal-line">
+                            <span class="prompt">user@portfolio:~$</span>
+                            <span class="command">ls -la social/</span>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="https://github.com/Oskar59" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub d'Oskar Doutreligne">
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/oskar-doutreligne-08216b2b4/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn d'Oskar Doutreligne">
+                                <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://www.instagram.com/oskardtlg/?igsh=ZnQ5Z3J5enE2MHB2&utm_source=qr#" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram d'Oskar Doutreligne">
+                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                                <span>Instagram</span>
+                            </a>
+                            <a href="https://tryhackme.com/p/Oskaar" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Profil TryHackMe d'Oskar Doutreligne">
+                                <i class="fas fa-user-secret" aria-hidden="true"></i>
+                                <span>TryHackMe</span>
+                            </a>
+                        </div>
+                        
+                        <div class="terminal-line">
+                            <span class="prompt">user@portfolio:~$</span>
+                            <span class="command">./send_message.sh</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <form id="messageForm" action="https://formspree.io/f/mjkyroqk" method="POST">
+                            <div class="form-group">
+                                <label for="name" class="form-label">
+                                    <span class="prompt">user@portfolio:~$</span> Nom:
+                                </label>
+                                <input type="text" id="name" name="name" class="form-input" placeholder="Entrez votre nom" required maxlength="100" autocomplete="name">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label">
+                                    <span class="prompt">user@portfolio:~$</span> Email:
+                                </label>
+                                <input type="email" id="email" name="_replyto" class="form-input" placeholder="Entrez votre email" required maxlength="100" autocomplete="email">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject" class="form-label">
+                                    <span class="prompt">user@portfolio:~$</span> Sujet:
+                                </label>
+                                <input type="text" id="subject" name="_subject" class="form-input" placeholder="Entrez le sujet" required maxlength="150">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message" class="form-label">
+                                    <span class="prompt">user@portfolio:~$</span> Message:
+                                </label>
+                                <textarea id="message" name="message" class="form-input form-textarea" placeholder="Entrez votre message" required maxlength="2000" rows="5"></textarea>
+                            </div>
+                            
+                            <!-- Protection contre les robots -->
+                            <input type="text" name="_gotcha" style="display:none">
+                            <!-- Redirection après envoi -->
+                            <input type="hidden" name="_next" value="https://Oskar59.github.io/portfolio/pages/contact.html?sent=success">
+                            <!-- Format de réponse -->
+                            <input type="hidden" name="_format" value="plain">
+                            <!-- Protection CSRF -->
+                            <input type="hidden" name="_csrf" value="">
+                            
+                            <button type="submit" class="submit-button">
+                                <i class="fas fa-paper-plane" aria-hidden="true"></i> Envoyer
+                            </button>
+                        </form>
+                        
+                        <div id="formResponse" class="form-response hidden">
+                            <div class="terminal-line">
+                                <span class="prompt">user@portfolio:~$</span>
+                                <span class="command">./message_sent.sh</span>
+                            </div>
+                            <div class="response-message">
+                                <p>Message envoyé avec succès !</p>
+                                <p>Je vous répondrai dans les plus brefs délais.</p>
+                                <div class="ascii-success">
+                                    <pre aria-label="Texte ASCII Art indiquant Succès">
+  _____                           
+ / ____|                         
+| (___  _   _  ___ ___ ___  ___   
+ \___ \| | | |/ __/ __/ _ \/ __| 
+ ____) | |_| | (_| (_|  __/\__ \ 
+|_____/ \__,_|\___\___\___||___/ 
+                                                          
+                    </pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="terminal-line footer-line">
+                        <span class="prompt">user@portfolio:~$</span>
+                        <span class="command blink">_</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="button-container">
+            <a href="../index.html" class="navigation-button back-button" aria-label="Retour à l'accueil">
+                <i class="fas fa-home icon" aria-hidden="true"></i>
+                <span>Accueil</span>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Oskar Doutreligne</p>
+        <!-- Défi caché pour les visiteurs attentifs -->
+        <div class="hidden-challenge">
+            <!-- Un commentaire HTML caché qui contient un indice -->
+            <!-- Défi de sécurité: Trouvez la clé cachée dans le code source -->
+            <!-- Indice 1: Inspectez les en-têtes de réponse HTTP -->
+            <!-- Indice 2: console.log peut révéler des secrets -->
+        </div>
+    </footer>
+
+    <script src="../js/pages.js"></script>
+    <script>
+        // Protection CSRF - Générer un token
+        document.addEventListener('DOMContentLoaded', function() {
+            const csrfToken = generateCSRFToken();
+            document.querySelector('input[name="_csrf"]').value = csrfToken;
+            
+            // Stockage du token dans le sessionStorage
+            sessionStorage.setItem('csrfToken', csrfToken);
+        });
+        
+        // Fonction pour générer un token aléatoire
+        function generateCSRFToken() {
+            return Math.random().toString(36).substring(2, 15) + 
+                   Math.random().toString(36).substring(2, 15);
+        }
+    </script>
+    <!-- Script pour le défi de sécurité caché -->
+    <script>
+        // Code caché pour le défi de sécurité
+        (function() {
+            // Information cachée dans la console pour les curieux
+            console.log("%cFélicitations, hacker ! Vous avez trouvé le premier indice.", "color: #3CFF97; font-size: 14px; font-weight: bold;");
+            console.log("%cDéfi de sécurité: trouvez la clé secrète cachée dans ce site.", "color: white;");
+            console.log("%cIndice suivant: examinez cet objet 👇", "color: orange;");
+            
+            // Créer un objet avec des informations cachées
+            const secretData = {
+                challenge: "Défi de cybersécurité SISR",
+                difficulty: "Moyen",
+                hint: "Une partie de la clé est: 'S3curity_'",
+                next_step: "Vérifiez les cookies et le localStorage"
+            };
+            console.log(secretData);
+            
+            // Ajouter un cookie caché
+            document.cookie = "part1_key=S3curity_1s_";
+            
+            // Ajouter une information dans localStorage
+            try {
+                localStorage.setItem("security_challenge_part2", "4lw4ys_1mp0rt4nt");
+            } catch (e) {
+                // Gérer les erreurs si localStorage n'est pas disponible
+            }
+            
+            // Ajouter un événement caché pour les touches spéciales
+            let konamiIndex = 0;
+            const konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]; // ↑↑↓↓←→←→BA
+            
+            window.addEventListener('keydown', function(e) {
+                // Vérifier si la touche correspond à la séquence
+                if (e.keyCode === konamiCode[konamiIndex]) {
+                    konamiIndex++;
+                    
+                    // Si toute la séquence est entrée
+                    if (konamiIndex === konamiCode.length) {
+                        // Réinitialiser l'index
+                        konamiIndex = 0;
+                        
+                        // Afficher un message caché pour compléter le défi
+                        const hackMessage = document.createElement('div');
+                        hackMessage.className = 'hack-success';
+                        hackMessage.innerHTML = `
+                            <div class="hack-container">
+                                <h3>🔓 Défi Réussi! 🔓</h3>
+                                <p>Félicitations! Vous avez réussi le défi de cybersécurité.</p>
+                                <p>La clé complète est: <span class="secret-key">S3curity_1s_4lw4ys_1mp0rt4nt</span></p>
+                                <p>Vous avez les compétences d'un vrai professionnel SISR!</p>
+                                <button class="close-hack-btn">Fermer</button>
+                            </div>
+                        `;
+                        
+                        document.body.appendChild(hackMessage);
+                        
+                        // Gérer la fermeture du message
+                        hackMessage.querySelector('.close-hack-btn').addEventListener('click', function() {
+                            hackMessage.remove();
+                        });
+                    }
+                } else {
+                    // Réinitialiser la séquence si mauvaise touche
+                    konamiIndex = 0;
+                }
+            });
+            
+            // Créer une fausse en-tête HTTP (visible uniquement dans les outils de développement)
+            // Dans un vrai site, cela serait configuré côté serveur
+            const meta = document.createElement('meta');
+            meta.name = 'X-Security-Challenge';
+            meta.content = 'Indice: Avez-vous vérifié les cookies et le localStorage?';
+            document.head.appendChild(meta);
+        })();
+    </script>
+</body>
+</html> 
+
+

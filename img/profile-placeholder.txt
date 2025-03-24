@@ -1,0 +1,9 @@
+Ce fichier est un rappel pour créer une image "profile-placeholder.jpg" dans ce dossier.
+
+Pour créer cette image, vous pouvez:
+1. Utiliser une photo de vous-même nommée "profile-photo.jpg"
+2. Ou créer une image placeholder simple avec vos initiales ou une icône
+
+Dimensions recommandées: 180x180 pixels minimum, format carré.
+
+Note: Sans cette image, une icône par défaut sera affichée sur la page CV. 
