@@ -14,7 +14,10 @@
 </head>
 <body>
     <div class="container">
-        <h1>Mon Alternance</h1>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Basculer le thème">
+            <i class="fas fa-sun"></i>
+        </button>
+        <h1>Mon alternance</h1>
         
         <div class="content-container internship-container">
             <div class="terminal-section">
@@ -29,258 +32,286 @@
                 <div class="terminal-body">
                     <div class="terminal-line">
                         <span class="prompt">user@portfolio:~$</span>
-                        <span class="command">cat company_info.txt</span>
+                        <span class="command">ls -la sections/</span>
                     </div>
-                    
-                    <div class="internship-section company-info">
-                        <h2><i class="fas fa-building" aria-hidden="true"></i> Entreprise d'accueil</h2>
-                        <div class="company-details">
-                            <div class="company-logo">
-                                <img src="../img/logo.jpg" alt="Logo de la DGFIP - Direction Générale des Finances Publiques" class="company-logo-img">
+
+                    <div class="tabs-container">
+                        <div class="tabs-nav">
+                            <button class="tab-button active" data-tab="entreprise">
+                                <i class="fas fa-building"></i> Entreprise d'accueil
+                            </button>
+                            <button class="tab-button" data-tab="missions">
+                                <i class="fas fa-tasks"></i> Missions et responsabilités
+                            </button>
+                            <button class="tab-button" data-tab="perimetre">
+                                <i class="fas fa-map-marked-alt"></i> Périmètre d'intervention
+                            </button>
+                            <button class="tab-button" data-tab="projets">
+                                <i class="fas fa-project-diagram"></i> Projets réalisés
+                            </button>
+                            <button class="tab-button" data-tab="competences">
+                                <i class="fas fa-graduation-cap"></i> Compétences acquises
+                            </button>
+                            <button class="tab-button" data-tab="reflexions">
+                                <i class="fas fa-lightbulb"></i> Réflexions personnelles
+                            </button>
+                        </div>
+
+                        <div class="tab-content active" id="entreprise">
+                            <div class="terminal-line">
+                                <span class="prompt">user@portfolio:~$</span>
+                                <span class="command">cat company_info.txt</span>
                             </div>
-                            <div class="company-text">
-                                <h3>Cellule Informatique Départementale (CID) du Nord</h3>
-                                <p class="location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Nord, France</p>
-                                <p class="sector"><i class="fas fa-industry" aria-hidden="true"></i> Secteur : Service Public / Finances Publiques</p>
-                                <p class="description">
-                                    La CID est rattachée à la Direction Générale des Finances Publiques (DGFIP) centré sur la gestion du parc informatique et l'assistance aux utilisateurs répartis sur l'ensemble du département du Nord.
+                            <div class="internship-section company-info">
+                                <h2><i class="fas fa-building" aria-hidden="true"></i> Entreprise d'accueil</h2>
+                                <div class="company-details">
+                                    <div class="company-logo">
+                                        <img src="../img/logo.jpg" alt="Logo de la DGFIP - Direction Générale des Finances Publiques" class="company-logo-img">
+                                    </div>
+                                    <div class="company-text">
+                                        <h3>Cellule Informatique Départementale (CID) du Nord</h3>
+                                        <p class="location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Nord, France</p>
+                                        <p class="sector"><i class="fas fa-industry" aria-hidden="true"></i> Secteur : Service Public / Finances Publiques</p>
+                                        <p class="description">
+                                            La CID est rattachée à la Direction Générale des Finances Publiques (DGFIP) centré sur la gestion du parc informatique et l'assistance aux utilisateurs répartis sur l'ensemble du département du Nord.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="missions">
+                            <div class="terminal-line">
+                                <span class="prompt">user@portfolio:~$</span>
+                                <span class="command">grep "responsibilities" internship_details.txt</span>
+                            </div>
+                            <div class="internship-section responsibilities">
+                                <h2><i class="fas fa-tasks" aria-hidden="true"></i> Missions et responsabilités</h2>
+                                <div class="mission-card">
+                                    <h3>Gestion du parc informatique</h3>
+                                    <ul>
+                                        <li>Tenue à jour du parc informatique via l'outil <span class="tool-mention" data-tool="sigma">SIGMA</span> (GLPI Adapté)</li>
+                                        <li>Inventaire et suivi du matériel dans les différentes structures</li>
+                                        <li>Documentation et reporting sur l'état du parc</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="mission-card">
+                                    <h3>Support et assistance utilisateurs</h3>
+                                    <ul>
+                                        <li>Résolution de tickets de support via la plateforme <span class="tool-mention" data-tool="omega">OMEGA</span></li>
+                                        <li>Assistance à distance (prise en main, téléphone)</li>
+                                        <li>Interventions sur site pour les problèmes complexes</li>
+                                        <li>Collaboration avec la cellule téléphonique et la SIL</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="mission-card">
+                                    <h3>Interventions terrain</h3>
+                                    <ul>
+                                        <li>Déplacements dans les structures des finances publiques du département</li>
+                                        <li>Diagnostic et résolution de problèmes matériels et logiciels</li>
+                                        <li>Installation et configuration d'équipements informatiques</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="perimetre">
+                            <div class="terminal-line">
+                                <span class="prompt">user@portfolio:~$</span>
+                                <span class="command">cat intervention_zones.txt</span>
+                            </div>
+                            <div class="internship-section intervention-zones">
+                                <h2><i class="fas fa-map-marked-alt" aria-hidden="true"></i> Périmètre d'intervention</h2>
+                                <p class="zone-description">
+                                    Dans le cadre de mes missions, j'interviens sur l'ensemble du département du Nord au sein de nombreux Centres des Finances Publiques. Cette mobilité me permet de découvrir différentes structures et de m'adapter aux besoins spécifiques de chaque site.
                                 </p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="terminal-line">
-                        <span class="prompt">user@portfolio:~$</span>
-                        <span class="command">grep "responsibilities" internship_details.txt</span>
-                    </div>
-                    
-                    <div class="internship-section responsibilities">
-                        <h2><i class="fas fa-tasks" aria-hidden="true"></i> Missions et responsabilités</h2>
-                        <div class="mission-card">
-                            <h3>Gestion du parc informatique</h3>
-                            <ul>
-                                <li>Tenue à jour du parc informatique via l'outil <span class="tool-mention" data-tool="sigma">SIGMA</span> (GLPI Adapté)</li>
-                                <li>Inventaire et suivi du matériel dans les différentes structures</li>
-                                <li>Documentation et reporting sur l'état du parc</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="mission-card">
-                            <h3>Support et assistance utilisateurs</h3>
-                            <ul>
-                                <li>Résolution de tickets de support via la plateforme <span class="tool-mention" data-tool="omega">OMEGA</span></li>
-                                <li>Assistance à distance (prise en main, téléphone)</li>
-                                <li>Interventions sur site pour les problèmes complexes</li>
-                                <li>Collaboration avec la cellule téléphonique et la SIL</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="mission-card">
-                            <h3>Interventions terrain</h3>
-                            <ul>
-                                <li>Déplacements dans les structures des finances publiques du département</li>
-                                <li>Diagnostic et résolution de problèmes matériels et logiciels</li>
-                                <li>Installation et configuration d'équipements informatiques</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="terminal-line">
-                        <span class="prompt">user@portfolio:~$</span>
-                        <span class="command">cat intervention_zones.txt</span>
-                    </div>
-                    
-                    <div class="internship-section intervention-zones">
-                        <h2><i class="fas fa-map-marked-alt" aria-hidden="true"></i> Périmètre d'intervention</h2>
-                        <p class="zone-description">
-                            Dans le cadre de mes missions, j'interviens sur l'ensemble du département du Nord au sein de nombreux Centres des Finances Publiques. Cette mobilité me permet de découvrir différentes structures et de m'adapter aux besoins spécifiques de chaque site.
-                        </p>
-                        
-                        <div class="sites-map-container">
-                            <div class="sites-intro">
-                                <p><i class="fas fa-info-circle" aria-hidden="true"></i> Je me déplace régulièrement dans les centres suivants :</p>
-                            </div>
-                            
-                            <div class="sites-grid">
-                                <div class="site-card">
-                                    <h4>Lille Métropole</h4>
-                                    <ul>
-                                        <li><i class="fas fa-building" aria-hidden="true"></i> Lille (DRFIP Kennedy)</li>
-                                        <li><i class="fas fa-building" aria-hidden="true"></i> Lille (NCA)</li>
-                                        <li><i class="fas fa-building" aria-hidden="true"></i> Lille (Fives)</li>
-                                        <li><i class="fas fa-building" aria-hidden="true"></i> Lille TH</li>
-                                        <li><i class="fas fa-building" aria-hidden="true"></i> Lille (DRFIP INSEE)</li>
-                                        <li><i class="fas fa-building" aria-hidden="true"></i> Lille (Paierie Régionale)</li>
-                                        <li><i class="fas fa-building" aria-hidden="true"></i> Lille CHU</li>
-                                        <li><i class="fas fa-building" aria-hidden="true"></i> Roubaix</li>
-                                        <li><i class="fas fa-building" aria-hidden="true"></i> Tourcoing</li>
-                                        <li><i class="fas fa-building" aria-hidden="true"></i> Armentières</li>
-                                    </ul>
-                                </div>
                                 
-                                <div class="site-card">
-                                    <h4>Flandre</h4>
-                                    <ul>
-                                        <li><i class="fas fa-building" aria-hidden="true"></i> Dunkerque</li>
-                                        <li><i class="fas fa-building" aria-hidden="true"></i> Dunkerque TH</li>
-                                        <li><i class="fas fa-building" aria-hidden="true"></i> Hazebrouck</li>
-                                    </ul>
+                                <div class="sites-map-container">
+                                    <div class="sites-intro">
+                                        <p><i class="fas fa-info-circle" aria-hidden="true"></i> Je me déplace régulièrement dans les centres suivants :</p>
+                                    </div>
+                                    
+                                    <div class="sites-grid">
+                                        <div class="site-card">
+                                            <h4>Lille Métropole</h4>
+                                            <ul>
+                                                <li><i class="fas fa-building" aria-hidden="true"></i> Lille (DRFIP Kennedy)</li>
+                                                <li><i class="fas fa-building" aria-hidden="true"></i> Lille (NCA)</li>
+                                                <li><i class="fas fa-building" aria-hidden="true"></i> Lille (Fives)</li>
+                                                <li><i class="fas fa-building" aria-hidden="true"></i> Lille TH</li>
+                                                <li><i class="fas fa-building" aria-hidden="true"></i> Lille (DRFIP INSEE)</li>
+                                                <li><i class="fas fa-building" aria-hidden="true"></i> Lille (Paierie Régionale)</li>
+                                                <li><i class="fas fa-building" aria-hidden="true"></i> Lille CHU</li>
+                                                <li><i class="fas fa-building" aria-hidden="true"></i> Roubaix</li>
+                                                <li><i class="fas fa-building" aria-hidden="true"></i> Tourcoing</li>
+                                                <li><i class="fas fa-building" aria-hidden="true"></i> Armentières</li>
+                                            </ul>
+                                        </div>
+                                        
+                                        <div class="site-card">
+                                            <h4>Flandre</h4>
+                                            <ul>
+                                                <li><i class="fas fa-building" aria-hidden="true"></i> Dunkerque</li>
+                                                <li><i class="fas fa-building" aria-hidden="true"></i> Dunkerque TH</li>
+                                                <li><i class="fas fa-building" aria-hidden="true"></i> Hazebrouck</li>
+                                            </ul>
+                                        </div>
+                                        
+                                        <div class="site-card">
+                                            <h4>Valenciennois</h4>
+                                            <ul>
+                                                <li><i class="fas fa-building" aria-hidden="true"></i> Valenciennes</li>
+                                                <li><i class="fas fa-building" aria-hidden="true"></i> Valenciennes TH</li>
+                                                <li><i class="fas fa-building" aria-hidden="true"></i> Denain</li>
+                                                <li><i class="fas fa-building" aria-hidden="true"></i> Wallers</li>
+                                                <li><i class="fas fa-building" aria-hidden="true"></i> Orchies</li>
+                                            </ul>
+                                        </div>
+                                        
+                                        <div class="site-card">
+                                            <h4>Cambrésis</h4>
+                                            <ul>
+                                                <li><i class="fas fa-building" aria-hidden="true"></i> Cambrai</li>
+                                                <li><i class="fas fa-building" aria-hidden="true"></i> Avesnes-les-Aubert</li>
+                                                <li><i class="fas fa-building" aria-hidden="true"></i> Le Cateau-Cambrésis TH</li>
+                                            </ul>
+                                        </div>
+                                        
+                                        <div class="site-card">
+                                            <h4>Douaisis</h4>
+                                            <ul>
+                                                <li><i class="fas fa-building" aria-hidden="true"></i> Douai</li>
+                                                <li><i class="fas fa-building" aria-hidden="true"></i> Caudry</li>
+                                            </ul>
+                                        </div>
+                                        
+                                        <div class="site-card">
+                                            <h4>Avesnois</h4>
+                                            <ul>
+                                                <li><i class="fas fa-building" aria-hidden="true"></i> Avesnes-sur-Helpe</li>
+                                                <li><i class="fas fa-building" aria-hidden="true"></i> Maubeuge</li>
+                                                <li><i class="fas fa-building" aria-hidden="true"></i> Le Quesnoy</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="intervention-highlight">
+                                        <p><i class="fas fa-lightbulb" aria-hidden="true"></i> Ma présence sur ces différents sites me permet de :</p>
+                                        <ul>
+                                            <li>Maîtriser les spécificités de nombreuses infrastructures</li>
+                                            <li>Développer mon autonomie et ma capacité d'adaptation</li>
+                                            <li>Établir des relations professionnelles avec divers interlocuteurs</li>
+                                            <li>Acquérir une vision globale du réseau informatique départemental</li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                
-                                <div class="site-card">
-                                    <h4>Valenciennois</h4>
-                                    <ul>
-                                        <li><i class="fas fa-building" aria-hidden="true"></i> Valenciennes</li>
-                                        <li><i class="fas fa-building" aria-hidden="true"></i> Valenciennes TH</li>
-                                        <li><i class="fas fa-building" aria-hidden="true"></i> Denain</li>
-                                        <li><i class="fas fa-building" aria-hidden="true"></i> Wallers</li>
-                                        <li><i class="fas fa-building" aria-hidden="true"></i> Orchies</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="site-card">
-                                    <h4>Cambrésis</h4>
-                                    <ul>
-                                        <li><i class="fas fa-building" aria-hidden="true"></i> Cambrai</li>
-                                        <li><i class="fas fa-building" aria-hidden="true"></i> Avesnes-les-Aubert</li>
-                                        <li><i class="fas fa-building" aria-hidden="true"></i> Le Cateau-Cambrésis TH</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="site-card">
-                                    <h4>Douaisis</h4>
-                                    <ul>
-                                        <li><i class="fas fa-building" aria-hidden="true"></i> Douai</li>
-                                        <li><i class="fas fa-building" aria-hidden="true"></i> Caudry</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="site-card">
-                                    <h4>Avesnois</h4>
-                                    <ul>
-                                        <li><i class="fas fa-building" aria-hidden="true"></i> Avesnes-sur-Helpe</li>
-                                        <li><i class="fas fa-building" aria-hidden="true"></i> Maubeuge</li>
-                                        <li><i class="fas fa-building" aria-hidden="true"></i> Le Quesnoy</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <div class="intervention-highlight">
-                                <p><i class="fas fa-lightbulb" aria-hidden="true"></i> Ma présence sur ces différents sites me permet de :</p>
-                                <ul>
-                                    <li>Maîtriser les spécificités de nombreuses infrastructures</li>
-                                    <li>Développer mon autonomie et ma capacité d'adaptation</li>
-                                    <li>Établir des relations professionnelles avec divers interlocuteurs</li>
-                                    <li>Acquérir une vision globale du réseau informatique départemental</li>
-                                </ul>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="terminal-line">
-                        <span class="prompt">user@portfolio:~$</span>
-                        <span class="command">ls -la projects/</span>
-                    </div>
-                    
-                    <div class="internship-section projects">
-                        <h2><i class="fas fa-project-diagram" aria-hidden="true"></i> Projets réalisés</h2>
-                        
-                        <div class="project-showcase">
-                            <div class="project-card">
-                                <div class="project-header">
-                                    <h3>Outil de gestion d'inventaire en Python</h3>
-                                    <div class="project-duration">Initiative personnelle</div>
-                                </div>
-                                <p class="project-description">
-                                    Développement d'un outil pour simplifier la mise à jour des inventaires sur site, 
-                                    permettant de fluidifier certaines procédures manuelles auparavant fastidieuses.
-                                </p>
-                                <div class="technologies">
-                                    <span class="tech-tag">Python</span>
-                                    <span class="tech-tag">Automatisation</span>
-                                    <span class="tech-tag">Interface utilisateur</span>
-                                </div>
-                                <div class="project-achievements">
-                                    <h4>Réalisations :</h4>
-                                    <ul>
-                                        <li>Simplification des processus d'inventaire</li>
-                                        <li>Réduction du temps de saisie</li>
-                                        <li>Interface adaptée aux besoins des techniciens terrain</li>
-                                    </ul>
-                                </div>
+
+                        <div class="tab-content" id="projets">
+                            <div class="terminal-line">
+                                <span class="prompt">user@portfolio:~$</span>
+                                <span class="command">ls -la projects/</span>
                             </div>
-                            
-                        </div>
-                    </div>
-                    
-                    <div class="terminal-line">
-                        <span class="prompt">user@portfolio:~$</span>
-                        <span class="command">cat skills_acquired.txt</span>
-                    </div>
-                    
-                    <div class="internship-section skills-acquired">
-                        <h2><i class="fas fa-graduation-cap" aria-hidden="true"></i> Compétences acquises</h2>
-                        <div class="skills-grid">
-                            <div class="skill-category">
-                                <h3>Techniques</h3>
-                                <ul>
-                                    <li>Gestion de parc informatique (SIGMA/GLPI)</li>
-                                    <li>Support technique (OMEGA)</li>
-                                    <li>Développement Python</li>
-                                    <li>Diagnostic et dépannage matériel/logiciel</li>
-                                    <li>Connaissances en cybersécurité</li>
-                                </ul>
-                            </div>
-                            <div class="skill-category">
-                                <h3>Outils et méthodes</h3>
-                                <ul>
-                                    <li>Ticketing et suivi d'incident</li>
-                                    <li>Procédures administratives</li>
-                                    <li>Méthodologie de résolution de problèmes</li>
-                                    <li>Gestion des priorités</li>
-                                    <li>Documentation technique</li>
-                                </ul>
-                            </div>
-                            <div class="skill-category">
-                                <h3>Soft Skills</h3>
-                                <ul>
-                                    <li>Communication avec les utilisateurs</li>
-                                    <li>Mobilité et adaptabilité</li>
-                                    <li>Force de proposition</li>
-                                    <li>Esprit d'initiative</li>
-                                    <li>Travail en équipe</li>
-                                </ul>
+                            <div class="internship-section projects">
+                                <h2><i class="fas fa-project-diagram" aria-hidden="true"></i> Projets réalisés</h2>
+                                
+                                <div class="project-showcase">
+                                    <div class="project-card">
+                                        <div class="project-header">
+                                            <h3>Outil de gestion d'inventaire en Python</h3>
+                                            <div class="project-duration">Initiative personnelle</div>
+                                        </div>
+                                        <p class="project-description">
+                                            Développement d'un outil pour simplifier la mise à jour des inventaires sur site, 
+                                            permettant de fluidifier certaines procédures manuelles auparavant fastidieuses.
+                                        </p>
+                                        <div class="technologies">
+                                            <span class="tech-tag">Python</span>
+                                            <span class="tech-tag">Automatisation</span>
+                                            <span class="tech-tag">Interface utilisateur</span>
+                                        </div>
+                                        <div class="project-achievements">
+                                            <h4>Réalisations :</h4>
+                                            <ul>
+                                                <li>Simplification des processus d'inventaire</li>
+                                                <li>Réduction du temps de saisie</li>
+                                                <li>Interface adaptée aux besoins des techniciens terrain</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="terminal-line">
-                        <span class="prompt">user@portfolio:~$</span>
-                        <span class="command">cat personal_insights.txt</span>
-                    </div>
-                    
-                    <div class="internship-section personal-insights">
-                        <h2><i class="fas fa-lightbulb" aria-hidden="true"></i> Réflexions personnelles</h2>
-                        <div class="insights-content">
-                            <p>
-                                Ce qui me plaît le plus dans ce métier, c'est le <strong>contact humain</strong> et la <strong>mobilité</strong> qu'il implique : 
-                                je ne me vois pas comme un informaticien figé derrière un écran, mais comme un professionnel en mouvement, 
-                                capable d'allier compétences techniques et proximité terrain.
-                            </p>
-                            <p>
-                                Ma plus-value dans l'équipe repose sur ma capacité à proposer des <strong>idées nouvelles</strong>, souvent plus simples 
-                                ou plus adaptées, et à être <strong>force de proposition</strong> au quotidien.
-                            </p>
-                            <p>
-                                Mon ambition à moyen terme est de devenir <strong>ingénieur en cybersécurité</strong>, un domaine que je découvre activement 
-                                en parallèle via la plateforme TryHackMe.
-                            </p>
+
+                        <div class="tab-content" id="competences">
+                            <div class="terminal-line">
+                                <span class="prompt">user@portfolio:~$</span>
+                                <span class="command">cat skills_acquired.txt</span>
+                            </div>
+                            <div class="internship-section skills-acquired">
+                                <h2><i class="fas fa-graduation-cap" aria-hidden="true"></i> Compétences acquises</h2>
+                                <div class="skills-grid">
+                                    <div class="skill-category">
+                                        <h3>Techniques</h3>
+                                        <ul>
+                                            <li>Gestion de parc informatique (SIGMA/GLPI)</li>
+                                            <li>Support technique (OMEGA)</li>
+                                            <li>Développement Python</li>
+                                            <li>Diagnostic et dépannage matériel/logiciel</li>
+                                            <li>Connaissances en cybersécurité</li>
+                                        </ul>
+                                    </div>
+                                    <div class="skill-category">
+                                        <h3>Outils et méthodes</h3>
+                                        <ul>
+                                            <li>Ticketing et suivi d'incident</li>
+                                            <li>Procédures administratives</li>
+                                            <li>Méthodologie de résolution de problèmes</li>
+                                            <li>Gestion des priorités</li>
+                                            <li>Documentation technique</li>
+                                        </ul>
+                                    </div>
+                                    <div class="skill-category">
+                                        <h3>Soft Skills</h3>
+                                        <ul>
+                                            <li>Communication avec les utilisateurs</li>
+                                            <li>Mobilité et adaptabilité</li>
+                                            <li>Force de proposition</li>
+                                            <li>Esprit d'initiative</li>
+                                            <li>Travail en équipe</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="terminal-line">
-                        <span class="prompt">user@portfolio:~$</span>
-                        <span class="command blink">_</span>
+
+                        <div class="tab-content" id="reflexions">
+                            <div class="terminal-line">
+                                <span class="prompt">user@portfolio:~$</span>
+                                <span class="command">cat personal_insights.txt</span>
+                            </div>
+                            <div class="internship-section personal-insights">
+                                <h2><i class="fas fa-lightbulb" aria-hidden="true"></i> Réflexions personnelles</h2>
+                                <div class="insights-content">
+                                    <p>
+                                        Ce qui me plaît le plus dans ce métier, c'est le <strong>contact humain</strong> et la <strong>mobilité</strong> qu'il implique : 
+                                        je ne me vois pas comme un informaticien figé derrière un écran, mais comme un professionnel en mouvement, 
+                                        capable d'allier compétences techniques et proximité terrain.
+                                    </p>
+                                    <p>
+                                        Ma plus-value dans l'équipe repose sur ma capacité à proposer des <strong>idées nouvelles</strong>, souvent plus simples 
+                                        ou plus adaptées, et à être <strong>force de proposition</strong> au quotidien.
+                                    </p>
+                                    <p>
+                                        Mon ambition à moyen terme est de devenir <strong>ingénieur en cybersécurité</strong>, un domaine que je découvre activement 
+                                        en parallèle via la plateforme TryHackMe.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -311,7 +342,7 @@
     </div>
 
     <script src="../js/pages.js"></script>
-    <script src="../js/tools.js"></script>
+    <script src="../script.js"></script>
 </body>
 </html> 
 

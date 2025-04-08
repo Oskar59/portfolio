@@ -21,6 +21,40 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Gérer les erreurs de chargement du logo de l'entreprise
     handleMissingCompanyLogo();
+
+    // Gestion des onglets de la page Alternance
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    function switchTab(tabId) {
+        // Mise à jour des boutons
+        tabButtons.forEach(button => {
+            button.classList.remove('active');
+            if (button.getAttribute('data-tab') === tabId) {
+                button.classList.add('active');
+            }
+        });
+
+        // Mise à jour des contenus
+        tabContents.forEach(content => {
+            content.classList.remove('active');
+            if (content.id === tabId) {
+                content.classList.add('active');
+            }
+        });
+    }
+
+    // Ajout des écouteurs d'événements sur les boutons
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const tabId = button.getAttribute('data-tab');
+            switchTab(tabId);
+        });
+    });
+
+    // Activation de l'onglet par défaut
+    const defaultTab = document.querySelector('.tab-button.active').getAttribute('data-tab');
+    switchTab(defaultTab);
 });
 
 /**
