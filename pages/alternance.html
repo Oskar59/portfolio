@@ -40,6 +40,9 @@
                             <button class="tab-button active" data-tab="entreprise">
                                 <i class="fas fa-building"></i> Entreprise d'accueil
                             </button>
+                            <button class="tab-button" data-tab="organigramme">
+                                <i class="fas fa-sitemap"></i> Organigramme
+                            </button>
                             <button class="tab-button" data-tab="missions">
                                 <i class="fas fa-tasks"></i> Missions et responsabilités
                             </button>
@@ -75,6 +78,9 @@
                                         <p class="description">
                                             La CID est rattachée à la Direction Générale des Finances Publiques (DGFIP) centré sur la gestion du parc informatique et l'assistance aux utilisateurs répartis sur l'ensemble du département du Nord.
                                         </p>
+                                    </div>
+                                    <div class="company-building">
+                                        <img src="../img/meurein.png" alt="Bâtiment de la DGFIP" class="company-building-img">
                                     </div>
                                 </div>
                             </div>
@@ -218,29 +224,36 @@
                             <div class="internship-section projects">
                                 <h2><i class="fas fa-project-diagram" aria-hidden="true"></i> Projets réalisés</h2>
                                 
-                                <div class="project-showcase">
-                                    <div class="project-card">
-                                        <div class="project-header">
-                                            <h3>Outil de gestion d'inventaire en Python</h3>
-                                            <div class="project-duration">Initiative personnelle</div>
-                                        </div>
-                                        <p class="project-description">
-                                            Développement d'un outil pour simplifier la mise à jour des inventaires sur site, 
-                                            permettant de fluidifier certaines procédures manuelles auparavant fastidieuses.
-                                        </p>
-                                        <div class="technologies">
-                                            <span class="tech-tag">Python</span>
-                                            <span class="tech-tag">Automatisation</span>
-                                            <span class="tech-tag">Interface utilisateur</span>
-                                        </div>
-                                        <div class="project-achievements">
-                                            <h4>Réalisations :</h4>
-                                            <ul>
-                                                <li>Simplification des processus d'inventaire</li>
-                                                <li>Réduction du temps de saisie</li>
-                                                <li>Interface adaptée aux besoins des techniciens terrain</li>
-                                            </ul>
-                                        </div>
+                                <div class="project-card">
+                                    <h3>Application de gestion d'inventaire en Python</h3>
+                                    <p>Développement d'une application en ligne de commande pour simplifier la gestion des inventaires informatiques au sein de la DGFIP.</p>
+                                    
+                                    <div class="project-image">
+                                        <a href="https://github.com/Oskar59/appinv/tree/main" target="_blank" rel="noopener noreferrer">
+                                            <img src="../img/inventaireapp.png" alt="Capture d'écran de l'application d'inventaire" class="project-img">
+                                        </a>
+                                    </div>
+                                    
+                                    <div class="project-tech">
+                                        <span class="tech-tag">Python</span>
+                                        <span class="tech-tag">CSV</span>
+                                        <span class="tech-tag">Tkinter</span>
+                                        <span class="tech-tag">Colorama</span>
+                                    </div>
+                                
+                                    <div class="project-achievements">
+                                        <h4>Fonctionnalités principales :</h4>
+                                        <ul>
+                                            <li>Création de nouvelles listes d'inventaire avec validation des données</li>
+                                            <li>Recherche et modification d'éléments existants</li>
+                                            <li>Interface utilisateur intuitive avec code couleur</li>
+                                            <li>Gestion des modèles d'équipements prédéfinis</li>
+                                            <li>Exportation des données au format CSV</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="project-description">
+                                        <p>Cette application est une initiative personnelle qui n'est pour le moment utilisée que par moi-même. Elle permet de faciliter la recherche et la modification des fichiers CSV que nous créons lorsque nous sortons tous les appareils répertoriés sur un site. Elle inclut une base de données de modèles d'équipements courants et offre une interface utilisateur intuitive avec code couleur pour faciliter la saisie et la validation des données.</p>
                                     </div>
                                 </div>
                             </div>
@@ -312,6 +325,218 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="tab-content" id="organigramme">
+                            <div class="terminal-line">
+                                <span class="prompt">user@portfolio:~$</span>
+                                <span class="command">cat esi_org_chart.txt</span>
+                            </div>
+                            <div class="org-chart-container">
+                                <div class="org-chart">
+                                    <div class="org-unit director">
+                                        <div class="org-header">
+                                            <h3>Direction</h3>
+                                        </div>
+                                        <div class="org-content">
+                                            <ul class="direction-list">
+                                                <li><strong>JOUANIN Nicolas</strong> - A+ AFIPA - Responsable ESI</li>
+                                                <li><strong>COUSIN Géraldine</strong> - A+ IP</li>
+                                                <li><strong>GAVREL Franck</strong> - A+ PSE</li>
+                                                <li><strong>CAPELLE Alain</strong> - A+ PSE</li>
+                                                <li><strong>LADRIERE Jean-François</strong> - A+ Analyste</li>
+                                                <li><strong>ROUSSEAU Jean-Pierre</strong> - A+ Analyste</li>
+                                                <li><strong>LEPRETRE Eric</strong> - A+ PSE</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="org-arrow">↓</div>
+
+                                    <div class="org-unit departments">
+                                        <div class="org-header">
+                                            <h3>Services</h3>
+                                        </div>
+                                        <div class="org-content">
+                                            <div class="dept-group">
+                                                <div class="dept">
+                                                    <h4>Développement</h4>
+                                                    <ul>
+                                                        <li><strong>BOULET Eric</strong> - A - Chef de projet</li>
+                                                        <li><strong>DUTHOIS Alexis</strong> - A - Analyste</li>
+                                                        <li><strong>PAWLOWSKI Jean-François</strong> - A - Analyste</li>
+                                                        <li><strong>BARCHICHE Smail</strong> - B - Prog</li>
+                                                        <li><strong>DELALIN Jacques</strong> - B - Prog</li>
+                                                        <li><strong>DORMIEUX Vincent</strong> - B - Prog</li>
+                                                        <li><strong>LE GOFF Denis</strong> - B - Prog</li>
+                                                        <li><strong>LOTH Manuel</strong> - B - Prog</li>
+                                                        <li><strong>ROUSSEL Virginie</strong> - B - Prog</li>
+                                                        <li><strong>SUEUR Gabriel</strong> - B - Prog</li>
+                                                        <li><strong>ISMAIL Ibis</strong> - Contractuel</li>
+                                                        <li><strong>BAYEUX Mathieu</strong> - Apprenti</li>
+                                                        <li><strong>BILLEMONT Alexis</strong> - Apprenti</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="dept">
+                                                    <h4>Centre OPS </h4>
+                                                    <ul>
+                                                        <li><strong>LEPRETRE Eric</strong> - A+ - PSE</li>
+                                                        <li><strong>ALLUIN Martin</strong> - A - PSE</li>
+                                                        <li><strong>DEZEQUE Etienne</strong> - A - PSE</li>
+                                                        <li><strong>DUCROCQ Kevin</strong> - A - PSE</li>
+                                                        <li><strong>EL HAMMOUCHI Morad</strong> - A ISIC - PSE</li>
+                                                        <li><strong>FOUAD Nour-Eddine</strong> - A ISIC</li>
+                                                        <li><strong>GANDOLFI Anabella</strong> - A - PSE</li>
+                                                        <li><strong>GILLARD David</strong> - A - PSE</li>
+                                                        <li><strong>IVENS Jeremy</strong> - A - PSE</li>
+                                                        <li><strong>LAMAND Laurent</strong> - A - PSE</li>
+                                                        <li><strong>VINCENT Hélène</strong> - A - Analyste</li>
+                                                        <li><strong>VOISIN Laurent</strong> - A - Détaché</li>
+                                                        <li><strong>RICHARD David</strong> - Contractuel</li>
+                                                        <li><strong>GABATHULER Olivier</strong> - Prestataire</li>
+                                                        <li><strong>WARNEFORD Bastien</strong> - Apprenti</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="dept">
+                                                    <h4>Intégration d'exploitabilité</h4>
+                                                    <ul>
+                                                        <li><strong>CAPELLE Alain</strong> - A+ - PSE </li>
+                                                        <li class="pole-header">Pôle Intex Applicative</li>
+                                                        <li><strong>AJAKANE Hassan</strong> - A - PSE</li>
+                                                        <li><strong>AUGUSTE CHARLERY Marina</strong> - A - Cheffe de projet</li>
+                                                        <li><strong>BARCHICHE Omar</strong> - A - PSE</li>
+                                                        <li><strong>DEMAGNY Patrick</strong> - A - PSE</li>
+                                                        <li><strong>GABELLE David</strong> - Contractuel - PSE</li>
+                                                        <li><strong>IDZIK Nicolas</strong> - Consultant</li>
+                                                        <li><strong>KESSLER Florine</strong> - A - PSE</li>
+                                                        <li><strong>LEZIER Eric</strong> - Contractuel - PSE</li>
+                                                        <li><strong>CORNU Sylvain</strong> - B - Prog</li>
+                                                        <li><strong>JASPART Christophe</strong> - B - Prog</li>
+                                                        <li><strong>SEINE Jean-Michel</strong> - B - Prog</li>
+                                                        <li class="pole-header">Pôle OSYRIS</li>
+                                                        <li><strong>TOULLEC Eric</strong> - A - PSE</li>
+                                                        <li><strong>GRAZEM Nourdine</strong> - B - Prog</li>
+                                                        <li><strong>LESAGE Florent</strong> - B - Prog</li>
+                                                        <li><strong>MOUGET Paul</strong> - Contractuel - PSE</li>
+                                                        <li><strong>OUICI Pascal</strong> - B - Prog</li>
+                                                        <li><strong>FICHAUX Gabin</strong> - Apprenti</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="dept">
+                                                    <h4>exploitation</h4>
+                                                    <ul>
+                                                        <li><strong>GAVREL Franck</strong> - A+ - PSE</li>
+                                                        <li class="pole-header">Pôle ASA</li>
+                                                        <li><strong>BOUTCHICH Ahmed</strong> - A - PSE</li>
+                                                        <li><strong>DEVYNCK Frédéric</strong> - A - PSE</li>
+                                                        <li><strong>GAYAN Axel</strong> - A - ISIC</li>
+                                                        <li><strong>KOWALSKI Robert</strong> - A - PSE</li>
+                                                        <li><strong>LECAT Klest</strong> - A - PSE</li>
+                                                        <li><strong>MISA Nicolas</strong> - A - PSE</li>
+                                                        <li><strong>POTTIEZ Sébastien</strong> - A - PSE</li>
+                                                        <li><strong>SEGISMONT Romain</strong> - A - PSE</li>
+                                                        <li><strong>SIX Mickaël</strong> - A - PSE</li>
+                                                        <li><strong>COUSEIN Pierre</strong> - B - PAU</li>
+                                                        <li><strong>DESPREZ Christophe</strong> - B - Prog</li>
+                                                        <li><strong>DARQUES Grégory</strong> - B - Prog</li>
+                                                        <li><strong>DHUEZ Laurent</strong> - B - Prog</li>
+                                                        <li><strong>GREMONT Christophe</strong> - B - PSE</li>
+                                                        <li><strong>SAMAIN Jerome</strong> - B - PSE</li>
+                                                        <li><strong>BOUCAU Caroline</strong> - Apprentie</li>
+                                                        <li class="pole-header">Pôle DBA</li>
+                                                        <li><strong>LEMAY Christian</strong> - A - PSE</li>
+                                                        <li><strong>PROSPERE Nicolas</strong> - A - PSE</li>
+                                                        <li><strong>ROUSSEL Margaux</strong> - A - PSE</li>
+                                                        <li><strong>SELVA Thierry</strong> - A - PSE</li>
+                                                        <li class="pole-header">Pôle AA</li>
+                                                        <li><strong>COCHE Patrice</strong> - B - Prog</li>
+                                                        <li><strong>DELMER Karine</strong> - B - PAU</li>
+                                                        <li><strong>FAYOLLE Myriam</strong> - B - PAU</li>
+                                                        <li><strong>LELONG Didier</strong> - B - Prog</li>
+                                                        <li><strong>REGNIER François</strong> - B - PAU</li>
+                                                        <li><strong>WASIK Sabine</strong> - B - Prog</li>
+                                                        <li><strong>DEVYNCK Pierre</strong> - C - PAU</li>
+                                                        <li class="pole-header">Cellule GAN</li>
+                                                        <li><strong>SAUVAGE Christophe</strong> - B - Prog</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="dept">
+                                                    <h4>Assistance Technique</h4>
+                                                    <ul>
+                                                        <li><strong>ADRIERE Jean-François</strong> - A+ - Analyste</li>
+                                                        <li class="pole-header">AT Direction</li>
+                                                        <li><strong>BERTIER Franck</strong> - B - PAU</li>
+                                                        <li><strong>BLANPAIN Eric</strong> - B - PAU</li>
+                                                        <li><strong>DESFROMONT Catherine</strong> - B - PAU</li>
+                                                        <li><strong>DUSART Stephanie</strong> - B - PAU</li>
+                                                        <li><strong>FLORCZYK Isabelle</strong> - B - Prog</li>
+                                                        <li><strong>GORRILLOT Veronique</strong> - B - PAU</li>
+                                                        <li><strong>LACZKOWSKI Bernard</strong> - B - Prog</li>
+                                                        <li><strong>LEOZ Anita</strong> - B - PAU</li>
+                                                        <li><strong>MONET Franck</strong> - B - PAU</li>
+                                                        <li><strong>NORMAND Claudie</strong> - B - PAU</li>
+                                                        <li><strong>TRAVAGLIATI Laurent</strong> - B - PAU</li>
+                                                        <li><strong>WARAMBOURG Delphine</strong> - B - PAU</li>
+                                                        <li><strong>DEWAELES Stephane</strong> - C - PAU</li>
+                                                        <li><strong>FONTAINE Bertrand</strong> - C - PAU</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="dept">
+                                                    <h4>Assistance de proximité</h4>
+                                                    <ul>
+                                                        <li><strong>ROUSSEAU Jean-Pierre</strong> - A+ - Analyste</li>
+                                                        
+                                                        <li class="pole-header">CID Arras</li>
+                                                        <li><strong>CALLET François</strong> - A - Analyste</li>
+                                                        <li><strong>BOUTILLIER Eric</strong> - B - PAU</li>
+                                                        <li><strong>CZECH Christian</strong> - B - PAU</li>
+                                                        <li><strong>CHAMBEURLANT Elie</strong> - B - PAU</li>
+                                                        <li><strong>DUMAINE Christian</strong> - B - PAU</li>
+                                                        <li><strong>FRANCOIS Barbara</strong> - B - PAU</li>
+                                                        <li><strong>KOLSKI Jean</strong> - B - PAU</li>
+                                                        <li><strong>LAMAND Jean-Claude</strong> - B - PAU</li>
+                                                        
+                                                        <li class="pole-header">CID Boulogne sur Mer</li>
+                                                        <li><strong>DELABY Julien</strong> - C - Détaché</li>
+                                                        
+                                                        <li class="pole-header">CID Lille</li>
+                                                        <li><strong>CROQUET Benjamin</strong> - A</li>
+                                                        <li><strong>BAUCHOT Thierry</strong> - B - Contractuel</li>
+                                                        <li><strong>BEAUMONT Patrick</strong> - B - PAU</li>
+                                                        <li><strong>CARLUS Sylvain</strong> - B - PAU</li>
+                                                        <li><strong>CHEKROUN Simon</strong> - B - PAU</li>
+                                                        <li><strong>DELCOURTE Laurent</strong> - B - PAU</li>
+                                                        <li><strong>DERCY Dominique</strong> - B - PAU</li>
+                                                        <li><strong>FAYOLLE David</strong> - B - PAU</li>
+                                                        <li><strong>KRENEK Hervé</strong> - B - PAU</li>
+                                                        <li><strong>SALADIN Bruno</strong> - B - PAU</li>
+                                                        <li><strong>TARADEL Eric</strong> - B - PAU</li>
+                                                        <li><strong>TRIQUET Sylvain</strong> - B - PAU</li>
+                                                        <li><strong>VANTOUROUX Philippe</strong> - B - PAU</li>
+                                                        <li><strong>BITTNER Paul</strong> - C - PAU</li>
+                                                        <li><strong>CORDIER DUBUISSON David</strong> - C - PAU</li>
+                                                        <li><strong>FACCHINO François</strong> - C - Contractuel</li>
+                                                        <li><strong>QUEYREL Fabrice</strong> - C - PAU</li>
+                                                        <li><strong>BIONAZ Logan</strong> - Apprenti</li>
+                                                        <li><strong class="highlight-name">DOUTRELIGNE Oskar</strong> - Apprenti</li>
+                                                        <li><strong>DUTOUR Lois</strong> - Apprentie</li>
+                                                        <li class="pole-header">SIL</li>
+                                                        <li><strong>GOURMEZ Christophe</strong> - A - Analyste</li>
+                                                        <li><strong>CARRIERE Olivier</strong> - B - PAU</li>
+                                                        <li><strong>DECARNE Jean-Charles</strong> - B - PAU</li>
+                                                        <li><strong>DEMARCQ Cédric</strong> - B - PAU</li>
+                                                        <li><strong>GONFRERE Jean-Luc</strong> - B - Prog</li>
+                                                        <li><strong>LITOU Jean</strong> - B - Prog</li>
+                                                        <li><strong>MILLE Fabrice</strong> - B - PAU</li>
+                                                        <li><strong>DADON Théo</strong> - Apprenti</li>
+                                                        <li><strong>DEMANY Romaric</strong> - Apprenti</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -343,6 +568,7 @@
 
     <script src="../js/pages.js"></script>
     <script src="../script.js"></script>
+    <script src="../js/tools.js"></script>
 </body>
 </html> 
 

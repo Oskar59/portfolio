@@ -765,29 +765,11 @@ footer {
     color: var(--terminal-prompt);
 }
 
-.project-card {
-    background-color: var(--card-bg);
-    border: 1px solid var(--card-border);
-    border-radius: 8px;
-    padding: 20px;
-    margin: 15px 0;
-    transition: all 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
+/* Suppression des styles de projets */
+/* .project-card,
 .project-link {
-    color: var(--link-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.project-link:hover {
-    color: var(--link-hover-color);
-}
+    display: none;
+} */
 
 [data-theme="light"] .submit-button {
     box-shadow: 0 2px 5px rgba(0, 180, 216, 0.2);
@@ -803,4 +785,262 @@ footer {
 
 [data-theme="light"] .tool-modal-content img {
     border: 1px solid rgba(0, 180, 216, 0.2);
+}
+
+.company-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.company-logo {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.company-logo-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.company-text {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.company-building {
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto 0;
+}
+
+.company-building-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.company-building-img:hover {
+    transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+    .company-logo, .company-building {
+        max-width: 100%;
+    }
+}
+
+/* Styles pour la section réseau */
+.network-topology {
+    padding: 2rem;
+}
+
+.network-diagram {
+    margin: 2rem 0;
+    text-align: center;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.network-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.network-img:hover {
+    transform: scale(1.02);
+}
+
+.network-legend {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+}
+
+.network-legend h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.network-legend ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.network-legend li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background: rgba(60, 255, 151, 0.1);
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.legend-item:hover {
+    background: rgba(60, 255, 151, 0.2);
+    transform: translateX(5px);
+}
+
+.legend-item i {
+    color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+    .network-legend ul {
+        grid-template-columns: 1fr;
+    }
+    
+    .network-diagram {
+        padding: 0.5rem;
+    }
+}
+
+/* Styles pour la section VLANs */
+.network-vlans {
+    margin-top: 2rem;
+}
+
+.network-vlans h3 {
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.vlan-category {
+    margin-bottom: 2rem;
+}
+
+.vlan-category h4 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    border-bottom: 1px solid var(--card-border);
+    padding-bottom: 0.5rem;
+}
+
+.vlan-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.vlan-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.vlan-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.vlan-header {
+    background: var(--accent-color);
+    color: var(--bg-color);
+    padding: 0.75rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.vlan-content {
+    padding: 1rem;
+}
+
+.vlan-content p {
+    margin: 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status-yes {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.status-no {
+    color: #f44336;
+    font-weight: bold;
+}
+
+.network-special-info {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+}
+
+.network-special-info h4 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.network-special-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.network-special-info li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    background: rgba(60, 255, 151, 0.1);
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.network-special-info li:hover {
+    background: rgba(60, 255, 151, 0.2);
+    transform: translateX(5px);
+}
+
+.network-special-info i {
+    color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+    .vlan-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .vlan-content p {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
 }
